@@ -1,0 +1,5 @@
+-- BORRADO BASE DE DATOS DAW217DBDepartamentos
+DROP DATABASE DAW217DBProyectoTema5;
+
+-- BORRADO USUARIO usuarioDAW217DBDepartamentos
+DROP USER usuarioDAW217DBProyectoTema5;

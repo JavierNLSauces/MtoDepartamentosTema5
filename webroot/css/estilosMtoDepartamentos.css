@@ -1,0 +1,368 @@
+/* 
+    Autor.- Javier Nieto 
+    Fecha de modificacion.- 2020/09/29
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@font-face {
+  font-family: "Bangers";
+  src: url(../fonts/Bangers-Regular.ttf);
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Medium.ttf);
+}
+* {
+  box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+html{
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+body {
+  width: 100%;
+  margin: 0px;
+}
+
+/* -------- HEADER -------- */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgb(255 137 0 / 0.74);
+  height: 50px;
+  font-family: "Bangers";
+}
+
+header > h1 {
+  margin: auto 10px;
+  text-align: center;
+  font-size: 45px;
+}
+
+.github{
+   width: 40px;
+}
+
+/* -------- MAIN -------- */
+
+main {
+  min-height: calc(100vh - 140px);
+  margin: 20px; 
+  font-family: "Roboto";
+}
+
+/* -------- BUSCADOR --------*/
+.buscador{
+    height: 50px;
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    border: 5px solid #ffa842;
+    border-radius: 10px;
+    width: 720px;
+    padding: 5px;
+}
+
+.buscador *{
+    display: inline-block;
+}
+
+.buscador input{
+  height: 25px;
+  width: 300px;
+}
+
+.buscador button[name="Buscar"]{
+    width: 100px;
+    height: 29px;
+    font-size: 1.05rem;
+    background-color: #ffcb8e;
+    border-radius: 20px;
+    border: 2px solid #ffa842;
+}
+
+
+/*form[name="formularioDepartamento"]{
+    position: relative;
+    
+}*/
+
+form[name="formularioDepartamento"] input[name="fechaBaja"]{
+    width: 90px;
+    
+}
+
+form[name="formularioDepartamento"] input[name="codigoDepartamento"] {
+    width: 155px;
+}
+
+form[name="formularioDepartamento"] input[name="volumenNegocio"] {
+    width: 140px;
+}
+
+form[name="formularioDepartamento"] input{
+    border: none;
+    width: 100%;
+}
+
+button[name="volver"]{
+    position: absolute;
+    font-size: 1.2rem;
+    bottom: 0;
+    right: 0;
+    background-color: #ffcb8e;
+    border-radius: 20px;
+    border: 2px solid #ffa842;
+}
+
+button[name="insertar"],button[name="importar"],button[name="exportar"],button[name="mostrarCodigo"]{
+    position: absolute;
+    display: inline-block;
+    font-size: 1.2rem;
+    background-color: #ffcb8e;
+    border-radius: 20px;
+    border: 2px solid #ffa842;
+}
+
+button[name="importar"]{
+    bottom: 0;
+    left: 0;
+}
+
+button[name="exportar"]{
+    bottom: 0;
+    left: 125px;
+}
+
+button[name="insertar"]{
+    right: 0;
+    top: -35px;
+}
+
+button[name="mostrarCodigo"]{
+    bottom: 0px;
+    left: 775px;
+}
+form[name="formularioBotones"] button img{
+    width: 20px;
+}
+
+form[name="formularioDepartamentos"] button img{
+    width: 20px;
+}
+
+
+.tablaDepartamentos{
+    min-width: 1300px;
+    border: 5px solid #ffa842;
+    border-radius: 10px;
+    padding: 15px;
+    height: 560px;
+}
+.tablaDepartamentos thead, .tablaDepartamentos tbody{
+    display: block;
+}
+
+.tablaDepartamentos tbody{
+    width: 450px;
+}
+
+/*.buscador div:last-child input{
+  margin: auto;
+}*/
+
+/* -------- CONTENT --------*/
+.content{
+  display: table;
+  position: relative;
+  padding-bottom: 60px;
+  margin: auto;
+  font-family: "Roboto";
+  /*overflow-y: scroll;*/
+}
+.content th, .content td, .content td a{
+  font-family: "Roboto";
+  font-size: 1.2rem;
+  text-align: left;
+}
+/*
+.content th, .content td{
+  padding: 0px 20px;
+}*/
+
+.tablaDepartamentos th:nth-child(1),.tablaDepartamentos td:nth-child(1){
+  min-width:205px;
+}
+.tablaDepartamentos th:nth-child(2),.tablaDepartamentos td:nth-child(2){
+  min-width:370px;
+}
+.tablaDepartamentos th:nth-child(3),.tablaDepartamentos td:nth-child(3){
+  min-width: 150px;
+}
+.tablaDepartamentos th:nth-child(4),.tablaDepartamentos td:nth-child(4){
+  min-width:150px;
+}
+.tablaDepartamentos th:nth-child(5),.tablaDepartamentos td:nth-child(5){
+  min-width:170px;
+}
+.tablaDepartamentos td:last-child{
+    min-width: 185px;
+}
+
+
+
+
+button[name="editar"],button[name="consultar"],button[name="borrar"],button[name="alta"],button[name="baja"]{
+    background-color: transparent;
+    border: none;
+    font-size: 1.25rem;
+}
+
+
+
+/* -------- FOOTER -------- */
+
+footer {
+  height: 50px;
+  text-align: center;
+  background-color: #908c8c75;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Bangers";
+}
+footer > address {
+  font-size: 20px;
+  padding: 10px 10px;
+  
+}
+footer a{
+    text-decoration: none;
+    color: black;
+}
+
+form[name="departamento"] {
+    min-width: 600px;
+    border: 5px solid #ffa842;
+    border-radius: 10px;
+    padding: 10px;
+}
+/*
+.fixed{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}*/
+.flex-container-align-item-center{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.button{
+    font-size: 1.2rem;
+    background-color: #ffcb8e;
+    border-radius: 20px;
+    border: 2px solid #ffa842;
+}
+
+form[name="departamento"] input[name="CodDepartamento"]{
+    width: 50px;
+}
+
+form[name="departamento"] input[name="DescDepartamento"]{
+    width: 300px;
+}
+
+form[name="departamento"] input[name="FechaBaja"]{
+
+}
+
+form[name="departamento"] input[name="VolumenNegocio"]{
+    width: 60px;
+}
+
+form[name="departamento"] input[name="Aceptar"]{
+    font-size: 1.2rem;
+    background-color: #9cff8e;
+    border-radius: 20px;
+    border: 2px solid #48ff42;
+}
+
+form[name="departamento"] input[name="Cancelar"]{
+    font-size: 1.2rem;
+    background-color: #ff8e8e;
+    border-radius: 20px;
+    border: 2px solid #ff6e42;
+}
+
+.required{
+    background-color: #81BEF7;
+}
+input[readonly=""]{
+    border: none;
+}
+
+.imgButton{
+    width: 20px;
+}
+
+.bajaLogica{
+    color:red;
+}
+
+.verde{
+    color: green;
+}
+
+form[name="formularioPaginacion"] img{
+    width: 35px;
+}
+
+form[name="formularioPaginacion"] button{
+    background-color: transparent;
+    border: none;
+}
+
+form[name="formularioPaginacion"] button[name="paginaInicial"]{
+    position: absolute;
+    left: 40%;
+    bottom: 2%;
+}
+
+form[name="formularioPaginacion"] button[name="retrocederPagina"]{
+    position: absolute;
+    left: 44%;
+    bottom: 2%;
+}
+
+form[name="formularioPaginacion"] button[name="avanzarPagina"]{
+    position: absolute;
+    right: 44%;
+    bottom: 2%;
+}
+
+form[name="formularioPaginacion"] button[name="paginaFinal"]{
+    position: absolute;
+    right: 40%;
+    bottom: 2%;
+}
+
+form[name="formularioPaginacion"] div{
+    position: absolute;
+    bottom: 4%;
+    left: 48%;
+}
+
+
+
+.rojo{
+    color: red;
+}
+
